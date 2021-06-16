@@ -23,7 +23,7 @@ class Blocks {
         return when(blockB){
                 String::class -> sumString.toString()
                 Int::class -> sumVal
-                LocalDate::class -> DateTimeFormatter.ofPattern("d.MM.yyyy",Locale("ru")).format(date)
+                LocalDate::class -> DateTimeFormatter.ofPattern("d.MM.yyyy",Locale("ru", "RU")).format(date)
                 else -> "unknown"
          }
 //        throw NotImplementedError("Not implemented")
