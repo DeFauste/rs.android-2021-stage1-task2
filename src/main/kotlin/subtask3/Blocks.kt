@@ -3,6 +3,7 @@ package subtask3
 import java.lang.StringBuilder
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
+import java.util.*
 import kotlin.reflect.KClass
 
 class Blocks {
@@ -22,7 +23,7 @@ class Blocks {
         return when(blockB){
                 String::class -> sumString.toString()
                 Int::class -> sumVal
-                LocalDate::class -> DateTimeFormatter.ofPattern("d.MM.yyyy").format(date)
+                LocalDate::class -> DateTimeFormatter.ofPattern("d.MM.yyyy",Locale.getDefault()).format(date)
                 else -> "unknown"
          }
 //        throw NotImplementedError("Not implemented")
