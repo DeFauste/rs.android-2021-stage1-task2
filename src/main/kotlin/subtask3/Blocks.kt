@@ -10,7 +10,7 @@ class Blocks {
     // TODO: Complete the following function
     fun getData(blockA: Array<*>, blockB: KClass<*>): Any {
         var sumVal = 0;
-        var sumString = StringBuilder()
+        val sumString = StringBuilder()
         var date: LocalDate = LocalDate.parse("0001-01-01")
         for (i in blockA){
             when(i){
