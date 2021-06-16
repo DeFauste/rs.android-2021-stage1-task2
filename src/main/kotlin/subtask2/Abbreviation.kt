@@ -9,6 +9,7 @@ class Abbreviation {
         var string = ""
         for(i in b.toLowerCase()) string += "${i}+.*"
         val matcher = Pattern.compile(string).matcher(a.toLowerCase())
+
         return if(matcher.find()) "YES" else "NO"
         //throw NotImplementedError("Not implemented")
     }
